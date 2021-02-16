@@ -17,8 +17,9 @@
 				$("#github_raw").keyup(function() {
 					let getUserInput = $(this).val();
 					let getH4 = $("body > h4");
+					let userInputCopy = $(getH4).text(getUserInput);
 					$(getH4).text(function() {
-						return $(this).text().replace("https://raw.githubusercontent.com/", "https://cdn.jsdelivr.net/gh/").replace("master/", "/");
+						return $(this).text().replace("https://raw.githubusercontent.com/", "https://cdn.jsdelivr.net/gh/").replace("master/", "");
 					});
 				});
 			}
